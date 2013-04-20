@@ -1,0 +1,178 @@
+/*
+#525356
+*/
+
+
+
+* {
+	margin:0;
+}
+
+body {
+	text-align: center;
+	font-family:arial,sans-serif;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color:#AEAEAE;
+}
+
+a {
+	text-decoration:none;
+	color: #AEAEAE;
+}
+
+table
+{
+    border-style:none;
+    padding:0px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+
+img{
+	border:0px;
+	margin: 2px 2px 2px 2px;
+}
+
+button
+{
+background  : none;
+cursor  : pointer;
+border: 0px;
+margin      : 0px;
+padding     : 0px;
+}
+
+
+
+#heading_tbl {
+	width: 400px
+}
+
+#frame {
+	text-align: left;
+	border: 1px solid #000;
+	width: 400px;
+	background:url(../images/bg.png) no-repeat #251616;
+	margin: 0 auto;
+}
+
+
+#nowplaying_heading {
+	font-size: 1.3em;
+	font-wieght: bold;
+	height: 30px;	
+	background: url(../images/control_bg.png) repeat-x;
+	border-bottom: 1px solid #525356;
+}
+
+#nowplaying_content {
+	margin: 10px 5px 10px 5px;
+	text-align: center;
+	border: 1px solid #525356;
+	width: 380px;
+	padding: 30px 0px 30px 0px;
+	background:url(../images/playing_bg.png);
+	font-weight: bold;
+	color: #fff;	
+}
+
+#controls {
+	text-align:center;
+	width: 390px;
+	margin: 10px 5px 10px 5px;
+}
+
+#controls table {
+	margin-left:auto; 
+    	margin-right:auto;
+}
+
+
+#playlist_menu {
+        font-wieght: bold;
+        height: 24px;
+        background: url(../images/control_bg.png) repeat-x;
+        border-top: 2px solid #525356;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+#items_heading {
+	text-align: center;
+	font-size: 1.0em;
+	font-weight:bold;
+	border-bottom: 1px solid #525356;
+	border-top: 1px solid #525356;
+	background-color:  #333;
+}
+
+#home {
+	text-align: left;
+        font-size: 1.0em;
+        font-weight:bold;
+	border-bottom: 3px solid #525356;
+        background-color: #251616;
+}
+
+#items {
+	font-size: 0.9em;
+	text-align: center;
+	min-height: 400px;
+	background:url(../images/playing_bg.jpg);
+}
+
+#items table {
+	width: 390px;
+	margin: 0px 5px 0px 5px;
+	border: 1px solid  #525356;
+}
+
+#file {
+	text-align: left;
+	width: 100%;
+
+}
+
+
+#itemEven{
+	background-color: #251616;
+
+}
+
+#itemOdd{
+        background-color: #333;
+}
+
+#itemActive {
+	background: url(../images/playing_bg.png);
+	color: #fff;
+}
+
+#itemActive a {
+	color: #fff;
+}
+
+
+#move img {
+	margin: 1px 1px 1px 1px;
+}
+
+#remove img {
+        margin: 1px 1px 1px 1px;
+}
+
+
+#volume_total {
+	width: 100px;
+	border: 1px solid #525356;
+	height: 5px;
+}
+
+
+#volume_actual {
+	background-color: #d9600c;
+	height:5px;
+}
+
