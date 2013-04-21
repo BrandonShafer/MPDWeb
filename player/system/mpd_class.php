@@ -850,7 +850,7 @@ class mpd {
         // Set Misc Other Variables
 		$this->state = $status['state'];
 		if ( ($this->state == MPD_STATE_PLAYING) || ($this->state == MPD_STATE_PAUSED) ) {
-			$this->current_track_id = $status['songid'];
+			$this->current_track_id = $status['artist'];
 			list ($this->current_track_position, $this->current_track_length ) = split(":",$status['time']);
 		} else {
 			$this->current_track_id = -1;
