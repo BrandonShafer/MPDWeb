@@ -11,7 +11,8 @@
                 $cur_track= $mpd->current_track_id;
                 $playlist= $mpd->playlist;
                 if($cur_track !=-1)
-                        echo htmlentities(cut_file($playlist[$cur_track]['name']));
+                        //echo htmlentities(cut_file($playlist[$cur_track]['name']));
+                        echo htmlentities (cut_file($cur_track));
                 else
                         echo "No Track selected!";
         ?>
