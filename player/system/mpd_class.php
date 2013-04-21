@@ -51,6 +51,7 @@ define("MPD_CMD_PLSWAPTRACK", "swap");
 define("MPD_CMD_PLMOVETRACK", "move");
 define("MPD_CMD_PASSWORD",    "password");
 define("MPD_CMD_TABLE",       "list");
+define("MPD_CMD_CURRENT",     "currentsong");
 
 // Predefined MPD Response messages
 define("MPD_RESPONSE_ERR", "ACK");
@@ -841,7 +842,18 @@ class mpd {
 				$statusLine = strtok("\n");
 			}
 		}
-
+                $currentStr = $this->SendCommand(MPD_CMD_CURRENT);
+                if ( ! $currentStr ) {
+			return NULL;
+		} else {
+			$current = array();
+			$currentLine = strtok($currentStr,"\n");
+			while ( $currentLine ) {
+				list ( $element, $value ) = split(": ",$currentLine);
+				$current[$element] = $value;
+				$currentLine = strtok("\n");
+			}
+		}
         // Get the Playlist
 		$plStr = $this->SendCommand(MPD_CMD_PLLIST);
    		$this->playlist = $this->_parseFileListResponse($plStr);
@@ -850,7 +862,7 @@ class mpd {
         // Set Misc Other Variables
 		$this->state = $status['state'];
 		if ( ($this->state == MPD_STATE_PLAYING) || ($this->state == MPD_STATE_PAUSED) ) {
-			$this->current_track_id = $status['artist'];
+			$this->current_track_id = "Artist: ".$current['Artist']." Title: ".$current['Title'];
 			list ($this->current_track_position, $this->current_track_length ) = split(":",$status['time']);
 		} else {
 			$this->current_track_id = -1;
