@@ -3,8 +3,8 @@ include('config/config.php');
 include('system/mpd_class.php');
 include('system/helper.php');
 
-$mpd = new mpd($mpd_host,$mpd_port,$mpd_password);
-
+//$mpd = new mpd($mpd_host,$mpd_port,$mpd_password);
+$mpd = new mpd($mpd_host,$mpd_port);
 if($mpd->connected != 1){
 	echo "Not Connected to Server";
 	exit(1);
