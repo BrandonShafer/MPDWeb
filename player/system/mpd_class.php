@@ -862,7 +862,17 @@ class mpd {
         // Set Misc Other Variables
 		$this->state = $status['state'];
 		if ( ($this->state == MPD_STATE_PLAYING) || ($this->state == MPD_STATE_PAUSED) ) {
-			$this->current_track_id = $current['comment']." ".$current['Title'];
+			$this->current_track_id = "artist: ".$current['artist'].
+                                "album : ".$current['album'].
+                                "title: ".$current['title'].
+                                "track: ".$current['track'].
+                                "name: ".$current['name'].
+                                "genre: ".$current['genre'].
+                                "date: ".$current['date'].
+                                "composer: ".$current['composer'].
+                                "performer: ".$current['performer'].
+                                "comment: ".$current['comment'].
+                                "disc: ".$current['disc'];
 			list ($this->current_track_position, $this->current_track_length ) = split(":",$status['time']);
 		} else {
 			$this->current_track_id = -1;
