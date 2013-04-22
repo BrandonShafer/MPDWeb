@@ -846,7 +846,7 @@ class mpd {
 		}
                 $currentStr = $this->SendCommand(MPD_CMD_CURRENT);
                 if ( ! $currentStr ) {
-			return NULL;
+			
 		} else {
 			$current = array();
 			$currentLine = strtok($currentStr,"\n");
