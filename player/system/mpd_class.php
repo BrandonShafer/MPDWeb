@@ -72,6 +72,7 @@ define("MPD_TBL_ARTIST","artist");
 define("MPD_TBL_ALBUM","album");
 
 class mpd {
+        var $dummy;
 	// TCP/Connection variables
 	var $host;
 	var $port;
@@ -818,6 +819,7 @@ class mpd {
         // Get the Server Statistics
 		$statStr = $this->SendCommand(MPD_CMD_STATISTICS);
 		if ( !$statStr ) {
+                    $this->dummy=$statStr;
 			return NULL;
 		} else {
 			$stats = array();
