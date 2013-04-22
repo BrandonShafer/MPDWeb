@@ -1,1 +1,4 @@
-player/index.php
+
+<?php
+header('Location: player/index.php');
+?>
