@@ -8,7 +8,7 @@ $mpd = new mpd($mpd_host,$mpd_port);
 if($mpd->connected != 1){
 	echo "Not Connected to Server";
         echo $mpd->errStr;
-        echo $mpd->$dummy;
+        var_dump($mpd->$dummy);
 	exit(1);
 }
 
