@@ -41,9 +41,10 @@
     <?php
       $dir=$_GET['dir']; 
       $dirs=$mpd->GetDir($dir);
-    
-     // <tr id="home"><td></td><td><a href="index.php?view=edit_playlist&dir=<?php echo cut_firstDir($dir);?>"><img width="20" src="images/left.png"></a></td><td></td><td></td>
-?>
+      echo "GOT TO HERE\n";
+    ?>
+     <tr id="home"><td></td><td><a href="index.php?view=edit_playlist&dir=<?php echo cut_firstDir($dir);?>"><img width="20" src="images/left.png"></a></td><td></td><td></td>
+
      <?php echo "count(dirs) =".count($dirs);
      for($i=0;$i<count($dirs);$i++) {?>
       <tr id="item<?php if($i%2==0) { echo "Even";}else{echo "Odd";}?>">
