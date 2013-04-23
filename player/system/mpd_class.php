@@ -357,16 +357,15 @@ class mpd {
                         while($plistLine = mysql_fetch_array($resp))
                         {
 				  $plCounter++;
-                                  echo "$plCounter\n";
 				  $plistArray[$plCounter]['name']=$plistLine['Name'];
-				  $plistArray[$plCounter]['type']="URL"; 
+				  $plistArray[$plCounter]['type']="file"; 
 				
 			} 
 		}
 		$dirlist = $plistArray;
 		if ( $this->debugging ) echo "mpd->GetDir() / return ".print_r($dirlist)."\n";
                 mysql_close();
-		return $dirlist;
+		return $plistArray;
 	}
 
 	/* PLAdd() 
