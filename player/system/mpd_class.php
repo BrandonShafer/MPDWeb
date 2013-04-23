@@ -391,8 +391,35 @@ class mpd {
 	 * Adds the file <file> to the end of the playlist. <file> must be a track in the MPD database. 
 	 */
 	function PLAdd($fileName) {
+            $username="mpd";
+            $database="playlist";
+            $password="turntheradioon";
+                
+            mysql_connect(localhost,$username,$password);
+            @mysql_select_db($database) or die( "Unable to select database");
+            $sql="select URL from list where Name='".$filename."'";
+                
+                
+		if ( $this->debugging ) echo "mpd->GetDir()\n";
+                
+		//$resp = $this->SendCommand(MPD_CMD_LSDIR,$dir);
+                $run=  mysql_query($sql);
+                if ( is_null($run) ) {
+                        echo "error COULDNT CONNECT TO MYSQL\n";
+			return NULL;
+		} else {
+			
+                        while($plistLine = mysql_fetch_array($run))
+                        {
+				  $fname=$plistLine['URL'];
+			} 
+		}
+		
+                mysql_close();
+		
 		if ( $this->debugging ) echo "mpd->PLAdd()\n";
-		if ( ! is_null($resp = $this->SendCommand(MPD_CMD_PLADD,$fileName))) $this->RefreshInfo();
+                
+		if ( ! is_null($resp = $this->SendCommand(MPD_CMD_PLADD,$fname))) $this->RefreshInfo();
 		if ( $this->debugging ) echo "mpd->PLAdd() / return\n";
 		return $resp;
 	}

@@ -45,14 +45,13 @@
     ?>
      <tr id="home"><td></td><td><a href="index.php?view=edit_playlist&dir=<?php echo cut_firstDir($dir);?>"><img width="20" src="images/left.png"></a></td><td></td><td></td>
 
-     <?php echo "count(dirs) =".count($dirs);
-     for($i=0;$i<count($dirs);$i++) {?>
+     <?php for($i=0;$i<count($dirs);$i++) {?>
       <tr id="item<?php if($i%2==0) { echo "Even";}else{echo "Odd";}?>">
 	  <td id="track_number"> <a name="<?php echo $i;?>"></a></td>
   	  <?php if($dirs[$i]['type']=="directory") {?>
 		<td id="file"><a href="index.php?view=edit_playlist&dir=<?php echo $dirs[$i]['name'];?>"><?php echo htmlentities(cut_lastDir($dirs[$i]['name']));?></a></td><td><a href="index.php?view=edit_playlist&task=adddir&item=<?php echo $dirs[$i]['name'];?>&dir=<?php echo $dir;?>#<?php echo $i;?>"><img width="15" src="images/plus.png"></a></td>
 	  <?php } else {?>
-		<td id="file"><?php echo htmlentities($dirs[$i]['name']);?></td><td><a href="index.php?view=edit_playlist&task=addfile&item=<?php echo $dirs[$i]['name'];?>&dir=<?php echo $dir;?>#<?php echo $i;?>"><img width="15" src="images/plus.png"></a></td>
+		<td id="file"><?php echo htmlentities($dirs[$i]['name']);?></td><td><a href="index.php?view=edit_playlist&task=addfile&item=<?php echo $dirs[$i]['name'];?>"><img width="15" src="images/plus.png"></a></td>
 	  <?php } ?>
 	  <td id="checkbox"><input type="checkbox" name="itemlist[]" value="<?php echo $i;?>"></td>
       </tr>
