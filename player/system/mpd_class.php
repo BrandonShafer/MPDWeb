@@ -335,10 +335,35 @@ class mpd {
 	 * base of the MPD music path. 
 	 */
 	function GetDir($dir = "") {
+                $username="mpd";
+                $database="playlist";
+                $password="turntheradioon";
+                
+                mysql_connect(localhost,$username,$password);
+                @mysql_select_db($database) or die( "Unable to select database");
+                $sql="select * from list";
+                
+                
 		if ( $this->debugging ) echo "mpd->GetDir()\n";
-		$resp = $this->SendCommand(MPD_CMD_LSDIR,$dir);
-		$dirlist = $this->_parseFileListResponse($resp);
+                
+		//$resp = $this->SendCommand(MPD_CMD_LSDIR,$dir);
+                $resp=  mysql_query($sql);
+                if ( is_null($resp) ) {
+			return NULL;
+		} else {
+			$plistArray = array();
+                        $plCounter = -1;
+                        while($plistLine = mysql_fetch_array($resp))
+                        {
+				  $plCounter++;
+				  $plistArray[$plCounter]['name']=$plistLine['Name'];
+				  $plistArray[$plCounter]['type']="URL"; 
+				
+			} 
+		}
+		$dirlist = $plistArray;
 		if ( $this->debugging ) echo "mpd->GetDir() / return ".print_r($dirlist)."\n";
+                mysql_close();
 		return $dirlist;
 	}
 
