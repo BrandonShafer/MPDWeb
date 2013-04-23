@@ -35,15 +35,14 @@
   </div>
   <div id="items">
     <table>
-        <?php
-      $dir=$_GET['dir']; 
-      $dirs=$mpd->GetDir($dir);
-      echo "<tr><td></td><td>".count($dirs)."</td></tr>"
-    ?>
     <tr id="items_heading">
 	<td></td><td>Title</td><th colspan="2">Control</th>
     </tr>
-    
+    <?php
+      $dir=$_GET['dir']; 
+      $dirs=$mpd->GetDir($dir);
+      
+    ?>
      <tr id="home"><td></td><td><a href="index.php?view=edit_playlist&dir=<?php echo cut_firstDir($dir);?>"><img width="20" src="images/left.png"></a></td><td></td><td></td>
 
      <?php echo "count(dirs) =".count($dirs);
