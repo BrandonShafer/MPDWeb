@@ -60,8 +60,9 @@ padding     : 0px;
 
 
 #nowplaying_heading {
-	font-size: 16pt;
+	font-size: 30pt;
 	font-wieght: bold;
+        font-family:helvetica,sans-serif;
 	height: 30px;	
 	background: url(../images/control_bg.png) repeat-x;
 	border-bottom: 1px solid #525356;
@@ -80,7 +81,7 @@ padding     : 0px;
 
 #controls {
 	text-align:center;
-	width: 390px;
+	width: 90%;
 	margin: 10px 5px 10px 5px;
 }
 
@@ -92,6 +93,7 @@ padding     : 0px;
 
 #playlist_menu {
         font-wieght: bold;
+        font-family:helvetica,sans-serif;
         height: 24px;
         background: url(../images/control_bg.png) repeat-x;
         border-top: 2px solid #525356;
@@ -101,7 +103,8 @@ padding     : 0px;
 
 #items_heading {
 	text-align: center;
-	font-size: 16pt;
+        font-family:helvetica,sans-serif;
+	font-size: 25pt;
 	font-weight:bold;
 	border-bottom: 1px solid #525356;
 	border-top: 1px solid #525356;
@@ -110,14 +113,15 @@ padding     : 0px;
 
 #home {
 	text-align: left;
-        font-size: 16pt;
+        font-size: 25pt;
+        font-family:helvetica,sans-serif;
         font-weight:bold;
 	border-bottom: 3px solid #525356;
         background-color: #251616;
 }
 
 #items {
-	font-size: 15pt;
+	font-size: 25pt;
 	text-align: center;
 	min-height: 400px;
 	background:url(../images/playing_bg.jpg);
