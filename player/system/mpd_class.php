@@ -341,7 +341,7 @@ class mpd {
                 
                 mysql_connect(localhost,$username,$password);
                 @mysql_select_db($database) or die( "Unable to select database");
-                $sql="select Name,URL from list";
+                $sql="select Name,URL from list order by Genre,Name";
                 
                 
 		if ( $this->debugging ) echo "mpd->GetDir()\n";
