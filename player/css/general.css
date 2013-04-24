@@ -74,7 +74,7 @@ padding     : 0px;
 	text-align: center;
 	border: 1px solid #525356;
 	width: 100%;
-	padding: 5px 0px 5px 0px;
+	padding: 0px 0px 0px 0px;
 	background:url(../images/playing_bg.png);
         font-family:helvetica,sans-serif;
         font-size:25pt;
@@ -85,12 +85,11 @@ padding     : 0px;
 #controls {
 	text-align:center;
 	width: 100%;
-	margin: 2px 1px 2px 1px;
+	margin: 0px 0px 0px 0px;
 }
 
 #controls table {
-	margin-left:auto; 
-    	margin-right:auto;
+	
 }
 
 
@@ -126,13 +125,13 @@ padding     : 0px;
 #items {
 	font-size: 25pt;
 	text-align: center;
-	min-height: 400px;
+	
 	background:url(../images/playing_bg.jpg);
 }
 
 #items table {
 	width: 100%;
-	margin: 0px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
 	border: 1px solid  #525356;
 }
 
