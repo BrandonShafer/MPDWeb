@@ -36,7 +36,7 @@
   <div id="items">
     <table>
     <tr id="items_heading">
-	<td></td><td>Title</td><th colspan="2">Control</th>
+	<td></td><td>Title</td><td>Genre</td><th colspan="2">Control</th>
     </tr>
     <?php
       $dir=$_GET['dir']; 
@@ -51,7 +51,7 @@
   	  <?php if($dirs[$i]['type']=="directory") {?>
 		<td id="file"><a href="index.php?view=edit_playlist&dir=<?php echo $dirs[$i]['name'];?>"><?php echo htmlentities(cut_lastDir($dirs[$i]['name']));?></a></td><td><a href="index.php?view=edit_playlist&task=adddir&item=<?php echo $dirs[$i]['name'];?>&dir=<?php echo $dir;?>#<?php echo $i;?>"><img width="15" src="images/plus.png"></a></td>
 	  <?php } else {?>
-		<td id="file"><?php echo htmlentities($dirs[$i]['name']);?></td><td><a href="index.php?view=edit_playlist&task=addfile&item=<?php echo $dirs[$i]['URL'];?>"><img width="15" src="images/plus.png"></a></td>
+		<td id="file"><?php echo htmlentities($dirs[$i]['name']);?></td><td><?php echo htmlentities($dirs[$i]['genre']);?></td><td><a href="index.php?view=edit_playlist&task=addfile&item=<?php echo $dirs[$i]['URL'];?>"><img width="15" src="images/plus.png"></a></td>
 	  <?php } ?>
 	  <td id="checkbox"><input type="checkbox" name="itemlist[]" value="<?php echo $i;?>"></td>
       </tr>
