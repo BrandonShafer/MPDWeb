@@ -10,7 +10,7 @@
 
 body {
 	text-align: center;
-	font-family:arial,sans-serif;
+	font-family:helvetica,sans-serif;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	color:#AEAEAE;
@@ -60,7 +60,7 @@ padding     : 0px;
 
 
 #nowplaying_heading {
-	font-size: 1.3em;
+	font-size: 16pt;
 	font-wieght: bold;
 	height: 30px;	
 	background: url(../images/control_bg.png) repeat-x;
@@ -101,7 +101,7 @@ padding     : 0px;
 
 #items_heading {
 	text-align: center;
-	font-size: 1.0em;
+	font-size: 16pt;
 	font-weight:bold;
 	border-bottom: 1px solid #525356;
 	border-top: 1px solid #525356;
@@ -110,14 +110,14 @@ padding     : 0px;
 
 #home {
 	text-align: left;
-        font-size: 1.0em;
+        font-size: 16pt;
         font-weight:bold;
 	border-bottom: 3px solid #525356;
         background-color: #251616;
 }
 
 #items {
-	font-size: 0.9em;
+	font-size: 15pt;
 	text-align: center;
 	min-height: 400px;
 	background:url(../images/playing_bg.jpg);
@@ -165,7 +165,7 @@ padding     : 0px;
 
 
 #volume_total {
-	width: 50px;
+	width: 100px;
 	border: 1px solid #525356;
 	height: 5px;
 }
