@@ -11,8 +11,8 @@
 body {
 	text-align: center;
 	font-family:helvetica,sans-serif;
-	margin-top: 15px;
-	margin-bottom: 15px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	color:#AEAEAE;
 }
 
@@ -64,7 +64,7 @@ padding     : 0px;
 	font-size: 25pt;
 	font-wieght: bold;
         font-family:helvetica,sans-serif;
-	height: 80px;	
+		
 	background: url(../images/control_bg.png) repeat-x;
 	border-bottom: 1px solid #525356;
 }
@@ -74,7 +74,7 @@ padding     : 0px;
 	text-align: center;
 	border: 1px solid #525356;
 	width: 100%;
-	padding: 30px 0px 30px 0px;
+	padding: 5px 0px 5px 0px;
 	background:url(../images/playing_bg.png);
         font-family:helvetica,sans-serif;
         font-size:25pt;
@@ -85,7 +85,7 @@ padding     : 0px;
 #controls {
 	text-align:center;
 	width: 100%;
-	margin: 10px 5px 10px 5px;
+	margin: 2px 1px 2px 1px;
 }
 
 #controls table {
@@ -97,11 +97,11 @@ padding     : 0px;
 #playlist_menu {
         font-wieght: bold;
         font-family:helvetica,sans-serif;
-        height: 40px;
+        
         background: url(../images/control_bg.png) repeat-x;
         border-top: 2px solid #525356;
-	margin-top:5px;
-	margin-bottom:5px;
+	margin-top:1px;
+	margin-bottom:1px;
 }
 
 #items_heading {
@@ -172,7 +172,7 @@ padding     : 0px;
 
 
 #volume_total {
-	width: 300px;
+	width: 100px;
 	border: 1px solid #525356;
 	height: 40px;
         font-size: 25pt;
