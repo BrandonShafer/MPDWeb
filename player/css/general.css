@@ -33,7 +33,7 @@ table
 img{
 	border:0px;
 	margin: 2px 2px 2px 2px;
-        width: 70px;
+        width: 35px;
 }
 
 button
@@ -73,7 +73,7 @@ padding     : 0px;
 	margin: 10px 5px 10px 5px;
 	text-align: center;
 	border: 1px solid #525356;
-	width: 90%;
+	width: 100%;
 	padding: 30px 0px 30px 0px;
 	background:url(../images/playing_bg.png);
         font-family:helvetica,sans-serif;
@@ -84,7 +84,7 @@ padding     : 0px;
 
 #controls {
 	text-align:center;
-	width: 90%;
+	width: 100%;
 	margin: 10px 5px 10px 5px;
 }
 
@@ -131,7 +131,7 @@ padding     : 0px;
 }
 
 #items table {
-	width: 90%;
+	width: 100%;
 	margin: 0px 5px 0px 5px;
 	border: 1px solid  #525356;
 }
