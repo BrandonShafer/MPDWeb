@@ -53,7 +53,7 @@ padding     : 0px;
 #frame {
 	text-align: left;
 	border: 1px solid #000;
-	width: 400px;
+	width: 100%;
 	background:url(../images/bg.png) no-repeat #251616;
 	margin: 0 auto;
 }
@@ -71,7 +71,7 @@ padding     : 0px;
 	margin: 10px 5px 10px 5px;
 	text-align: center;
 	border: 1px solid #525356;
-	width: 380px;
+	width: 90%;
 	padding: 30px 0px 30px 0px;
 	background:url(../images/playing_bg.png);
 	font-weight: bold;
@@ -124,7 +124,7 @@ padding     : 0px;
 }
 
 #items table {
-	width: 390px;
+	width: 90%;
 	margin: 0px 5px 0px 5px;
 	border: 1px solid  #525356;
 }
@@ -165,7 +165,7 @@ padding     : 0px;
 
 
 #volume_total {
-	width: 100px;
+	width: 50px;
 	border: 1px solid #525356;
 	height: 5px;
 }
