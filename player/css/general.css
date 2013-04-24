@@ -33,7 +33,7 @@ table
 img{
 	border:0px;
 	margin: 2px 2px 2px 2px;
-        width: 30px;
+        width: 50px;
 }
 
 button
@@ -48,7 +48,7 @@ padding     : 0px;
 
 
 #heading_tbl {
-	width: 400px
+	width: 100%px
 }
 
 #frame {
