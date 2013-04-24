@@ -97,7 +97,7 @@ padding     : 0px;
 #playlist_menu {
         font-wieght: bold;
         font-family:helvetica,sans-serif;
-        height: 24px;
+        height: 40px;
         background: url(../images/control_bg.png) repeat-x;
         border-top: 2px solid #525356;
 	margin-top:5px;
@@ -172,15 +172,15 @@ padding     : 0px;
 
 
 #volume_total {
-	width: 200px;
+	width: 300px;
 	border: 1px solid #525356;
-	height: 15px;
+	height: 40px;
         font-size: 50pt;
 }
 
 
 #volume_actual {
 	background-color: #d9600c;
-	height:15px;
+	height:40px;
 }
 
