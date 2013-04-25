@@ -167,12 +167,12 @@ padding     : 0px;
 #volume_total {
 	width: 100px;
 	border: 1px solid #525356;
-	height: 5px;
+	height: 10px;
 }
 
 
 #volume_actual {
 	background-color: #d9600c;
-	height:5px;
+	height:10px;
 }
 
