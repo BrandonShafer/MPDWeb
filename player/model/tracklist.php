@@ -75,13 +75,13 @@ switch($task) {
 
 	case("addselected"):
 		$items=$_POST['itemlist'];
-		$dir=$_GET['dir'];
+		//$dir=$_GET['dir'];
 		$files = $mpd->GetDir($dir);
                 for($i=0;$i<count($items);$i++) {
                         if($files[$items[$i]]['type']=="directory") {
                                 addDir($files[$items[$i]]['name'],$mpd);
                         } else {
-                                $mpd->PLAdd($files[$items[$i]]['name']);
+                                $mpd->PLAdd($files[$items[$i]]['URL']);
                         }
                 }
 		break;
