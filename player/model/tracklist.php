@@ -87,13 +87,13 @@ switch($task) {
 		break;
 
 	case("addall"):
-                $dir=$_GET['item'];
+                //$dir=$_GET['item'];
                 $files = $mpd->GetDir($dir);
                 for($i=0;$i<count($files);$i++) {
                         if($files[$i]['type']=="directory") {
                                 addDir($files[$i]['name'],$mpd);
                         } else {
-                                $mpd->PLAdd($files[$i]['name']);
+                                $mpd->PLAdd($files[$i]['URL']);
                         }
                 }
                 break;
